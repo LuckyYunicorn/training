@@ -17,17 +17,11 @@
 //   print("Sum: $result");
 // }
 
-
-
-
-
-
-
 import 'dart:isolate';
 
 void heavyTask(SendPort sendPort){
   int count = 0;
-  for(int i=0; i<999; i++){
+  for(int i=0; i<9999999999; i++){
     count+=10;
   }
   sendPort.send(count);
@@ -36,8 +30,6 @@ void heavyTask(SendPort sendPort){
 void main()async{
   ReceivePort receivePort = ReceivePort();
   await Isolate.spawn(heavyTask, receivePort.sendPort);
-  receivePort.listen((val){
-    print(val);
-    receivePort.close();
-  });
+  var val = await receivePort.first;
+  print(val);
 }
