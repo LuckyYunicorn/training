@@ -15,7 +15,7 @@ class _ContainerWidgetState extends State<ContainerWidget> {
         width: 100,
         height: 100,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.elliptical(200, 200)),
+          borderRadius: BorderRadius.horizontal(),
           border: Border.all(
             color: Colors.brown,
             width: 2,
@@ -27,8 +27,13 @@ class _ContainerWidgetState extends State<ContainerWidget> {
               color: Colors.red,
               spreadRadius: 2,
               blurRadius: 20,
-              offset: Offset(15, 15),
+              offset: Offset(2, 10),
+            ),BoxShadow(
+              color: Colors.blue,
+              spreadRadius: 10,
+              offset: Offset(0, 0),
             ),
+
           ],
         ),
         // foregroundDecoration: BoxDecoration(

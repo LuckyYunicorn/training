@@ -6,9 +6,11 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: CircleBorder(),
 
       color: Colors.brown,
       child: Text("data"),
+
     );
   }
 }
