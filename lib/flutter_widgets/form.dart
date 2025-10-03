@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:training/flutter_widgets/text_field.dart';
 import 'package:training/flutter_widgets/text_form_field.dart';
 
 class CustomForm extends StatefulWidget {
@@ -37,6 +38,9 @@ class _CustomFormState extends State<CustomForm> {
           child: Column(
             children: [
               CustomTextFormField(myController: myController),
+              SizedBox(height: 10,),
+              CustomTextField(),
+              SizedBox(height: 15,),
 
               ElevatedButton(
                 onPressed: () {

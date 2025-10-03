@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController myController;
@@ -10,6 +11,12 @@ class CustomTextFormField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
+          inputFormatters: [
+            FilteringTextInputFormatter.allow(
+              RegExp(r'[a-zA-Z0-9@.]'),
+            ), // Only allow certain characters
+            LengthLimitingTextInputFormatter(50), // Limit input length
+          ],
           controller: myController,
 
           // cursorRadius: Radius.circular(20),
