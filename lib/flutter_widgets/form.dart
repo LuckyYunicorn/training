@@ -30,17 +30,16 @@ class _CustomFormState extends State<CustomForm> {
           //   print("object");
           // },
           // canPop: false,
-          onPopInvokedWithResult: (didPop, result) {
-            print("Did pop: $didPop, Result: $result");
-          },
-
+          // onPopInvokedWithResult: (didPop, result) {
+          //   print("Did pop: $didPop, Result: $result");
+          // },
           key: _fromKey,
           child: Column(
             children: [
               CustomTextFormField(myController: myController),
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
               CustomTextField(),
-              SizedBox(height: 15,),
+              SizedBox(height: 15),
 
               ElevatedButton(
                 onPressed: () {

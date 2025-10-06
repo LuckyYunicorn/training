@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class CustomTextFormField extends StatelessWidget {
+class CustomTextFormField extends StatefulWidget {
   final TextEditingController myController;
   const CustomTextFormField({super.key, required this.myController});
 
   @override
+  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
+}
+
+class _CustomTextFormFieldState extends State<CustomTextFormField> {
+  TextEditingController? newController ;
+  @override
+  void initState() {
+    newController = TextEditingController(text: widget.myController.toString());
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
+          controller: widget.myController,
           inputFormatters: [
             FilteringTextInputFormatter.allow(
               RegExp(r'[a-zA-Z0-9@.]'),
             ), // Only allow certain characters
             LengthLimitingTextInputFormatter(50), // Limit input length
           ],
-          controller: myController,
 
           // cursorRadius: Radius.circular(20),
           // cursorWidth: 20,
@@ -29,6 +41,7 @@ class CustomTextFormField extends StatelessWidget {
           // obscureText: true,
           // obscuringCharacter: "*",
           decoration: InputDecoration(
+
             contentPadding: EdgeInsets.all(0),
             // labelText: "Name",
             // labelStyle:TextStyle(

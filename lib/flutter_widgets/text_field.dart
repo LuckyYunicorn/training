@@ -15,7 +15,7 @@ class CustomTextField extends StatelessWidget {
         //   ), // Only allow certain characters
         //   // LengthLimitingTextInputFormatter(5), // Limit input length
         // ],
-        maxLength: 10,
+        maxLength: 30,
         textCapitalization: TextCapitalization.words,
         textInputAction: TextInputAction.send,
         decoration: InputDecoration(
