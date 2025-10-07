@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:training/flutter_widgets/bottom_nav_bar.dart';
 import 'package:training/flutter_widgets/card.dart';
 import 'package:training/flutter_widgets/container.dart';
+import 'package:training/flutter_widgets/drawer.dart';
 import 'package:training/flutter_widgets/form.dart';
 import 'package:training/flutter_widgets/grid_view_builder.dart';
 import 'package:training/flutter_widgets/hit_test.dart';
@@ -20,10 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.grey.shade400,
-        body: SafeArea(child: CustomListViewBuilder()),
-      ),
+      home: CustomBottomNavBar(),
     );
   }
 }
