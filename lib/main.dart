@@ -6,7 +6,9 @@ import 'package:training/flutter_widgets/drawer.dart';
 import 'package:training/flutter_widgets/form.dart';
 import 'package:training/flutter_widgets/grid_view_builder.dart';
 import 'package:training/flutter_widgets/hit_test.dart';
+import 'package:training/flutter_widgets/images.dart';
 import 'package:training/flutter_widgets/list_view_builder.dart';
+import 'package:training/flutter_widgets/row_column.dart';
 import 'package:training/flutter_widgets/text.dart';
 import 'package:training/flutter_widgets/text_form_field.dart';
 import 'package:training/flutter_widgets/wrap_widget.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomBottomNavBar(),
+      home: CustomImages(),
     );
   }
 }

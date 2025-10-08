@@ -14,7 +14,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     Center(child: Text("Home")),
     Center(child: Text("Search")),
     Center(child: Text("Favorite")),
-    Center(child: Text("Settings")),
+    Center(child: Text("Profile")),
   ];
   FocusNode _focusNode = FocusNode();
   @override
@@ -51,24 +51,29 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           });
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButton: FloatingActionButton(
-
         splashColor: Colors.green,
         backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.red,
+        focusColor: Colors.yellow,
         elevation: 10,
-        focusElevation: 30,
-        tooltip: "Add new Data",
+        focusElevation: 50,
+        // tooltip: "Add new Data",
         shape: CircleBorder(side: BorderSide(width: 3, color: Colors.red)),
         // enableFeedback: true,
         autofocus: true,
         // focusNode: _focusNode,
-        heroTag: "fab1",
+        // heroTag: "fab1",
+        // hoverElevation: 100,
+        // hoverColor: Colors.black,
+        // mini: false,
+        highlightElevation: 40,
         onPressed: () {
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text("data")));
+          // ScaffoldMessenger.of(
+          //   context,
+          // ).showSnackBar(SnackBar(content: Text("data")));
         },
 
         child: Icon(Icons.add),

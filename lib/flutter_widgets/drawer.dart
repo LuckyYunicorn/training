@@ -10,7 +10,9 @@ class CustomDrawer extends StatelessWidget {
     return SafeArea(
       child: Drawer(
         width: 300,
+        semanticLabel: "Hello World",
         backgroundColor: Colors.white,
+        surfaceTintColor: Colors.blue,
         shadowColor: Colors.red,
         elevation: 20,
         child: Column(
