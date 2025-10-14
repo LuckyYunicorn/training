@@ -67,61 +67,93 @@ class CustomRowColumn extends StatefulWidget {
 }
 
 class _CustomRowColumnState extends State<CustomRowColumn> {
+  int count  = 0;
+  Future<void> increment()async{
+    setState(() {
+      count++;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              spacing: 10,
-              children: [
-                Container(color: Colors.green, height: 100, width: 100),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-                Text("data"),
-              ],
-            ),
+      body: RefreshIndicator(
+        triggerMode: RefreshIndicatorTriggerMode.anywhere,
+        onRefresh: () async{
+         await increment();
+        },
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  spacing: 10,
+                  children: [
+                    Container(color: Colors.green, height: 100, width: 100),
+                    Text("$count"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                    Text("data"),
+                  ],
+                ),
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.white,
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.white,
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.white,
+              ),
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.white,
+              ),
+            ],
           ),
-          Container(
-            height: 400,
-            color: Colors.red,
-          )
-        ],
+        ),
       ),
     );
   }

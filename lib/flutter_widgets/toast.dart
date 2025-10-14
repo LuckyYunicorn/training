@@ -20,11 +20,12 @@ class _CustomToastState extends State<CustomToast> {
             // webPosition: "center", // optional: "top", "center", "bottom"
             msg: "Item added to cart!",
             toastLength: Toast.LENGTH_LONG,
-            gravity: ToastGravity.TOP,
+            gravity: ToastGravity.CENTER,
             backgroundColor: Colors.red,
             textColor: Colors.white,
-            // fontSize: 22,
+            fontSize: 22,
             // fontAsset: "Hello"
+
 
           );
         },

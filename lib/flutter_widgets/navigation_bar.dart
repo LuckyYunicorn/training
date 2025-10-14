@@ -28,7 +28,7 @@ class _CustomNavBarState extends State<CustomNavBar> {
           return null; // default
         }),
 
-        surfaceTintColor: Colors.purple,
+        // surfaceTintColor: Colors.purple,
         elevation: 10,
 
         shadowColor: Colors.deepPurple,
