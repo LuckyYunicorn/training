@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training/flutter_widgets/animation.dart';
 import 'package:training/flutter_widgets/bottom_nav_bar.dart';
 import 'package:training/flutter_widgets/bottom_sheet.dart';
 import 'package:training/flutter_widgets/card.dart';
@@ -9,14 +10,19 @@ import 'package:training/flutter_widgets/form.dart';
 import 'package:training/flutter_widgets/gesture_inkwell.dart';
 import 'package:training/flutter_widgets/grid_view_builder.dart';
 import 'package:training/flutter_widgets/hit_test.dart';
+import 'package:training/flutter_widgets/image_picker.dart';
 import 'package:training/flutter_widgets/images.dart';
 import 'package:training/flutter_widgets/list_tile.dart';
 import 'package:training/flutter_widgets/list_view_builder.dart';
 import 'package:training/flutter_widgets/navigation_bar.dart';
 import 'package:training/flutter_widgets/page_view.dart';
+import 'package:training/flutter_widgets/pop_up_menu.dart';
 import 'package:training/flutter_widgets/refresh_indicator.dart';
 import 'package:training/flutter_widgets/row_column.dart';
+import 'package:training/flutter_widgets/slider.dart';
+import 'package:training/flutter_widgets/stepper.dart';
 import 'package:training/flutter_widgets/stream_builder.dart';
+import 'package:training/flutter_widgets/switch.dart';
 import 'package:training/flutter_widgets/tab_bar.dart';
 import 'package:training/flutter_widgets/text.dart';
 import 'package:training/flutter_widgets/text_form_field.dart';
@@ -39,7 +45,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // theme: ThemeData.dark(),
-      home: CustomTimePicker(),
+      home: CustomAnimation(),
     );
   }
 }

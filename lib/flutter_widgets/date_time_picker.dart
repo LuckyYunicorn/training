@@ -46,7 +46,7 @@ class _CustomDateTimePickerState extends State<CustomDateTimePicker> {
                         datePickerTheme: DatePickerThemeData(
                           dayShape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
+                              // borderRadius: BorderRadius.circular(10),
                             ),
                           ),
                           dayBackgroundColor:

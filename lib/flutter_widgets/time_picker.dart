@@ -29,36 +29,39 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
               onPressed: () async {
                 TimeOfDay? pickedTime = await showTimePicker(
                   context: context,
+
                   initialTime: TimeOfDay.now(),
                   builder: (context, child) {
                     return Theme(
                       data: Theme.of(context).copyWith(
                         // colorScheme: const ColorScheme.light(
-                        //   // primary: Colors.deepPurple, // clock hand color
-                        //   // onPrimary: Colors.blue, // text color on clock
-                        //   // onSurface: Colors.red, // numbers color
-                        //   // surface: Colors.purple,
+                        // primary: Colors.deepPurple, // clock hand color
+                        // onPrimary: Colors.blue, // text color on clock
+                        // onSurface: Colors.red, // numbers color
+                        // surface: Colors.purple,
                         // ),
                         timePickerTheme: TimePickerThemeData(
                           dialBackgroundColor: Colors.red,
                           dialHandColor: Colors.green,
                           dialTextColor: Colors.white,
-                          dialTextStyle: TextStyle(
-                            fontSize: 18
-
-                          ),
+                          dialTextStyle: TextStyle(fontSize: 18),
                           backgroundColor: Colors.blue,
                           cancelButtonStyle: ButtonStyle(
-                            foregroundColor: MaterialStateProperty.all(Colors.white),
-                            backgroundColor: MaterialStateProperty.all(Colors.red),
+                            foregroundColor: MaterialStateProperty.all(
+                              Colors.white,
+                            ),
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.red,
+                            ),
                           ),
                           // timeSelectorSeparatorColor:
-                          shape:  RoundedRectangleBorder(),
+                          shape: RoundedRectangleBorder(),
                           dayPeriodShape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.elliptical(10, 40)),
+                            borderRadius: BorderRadius.all(
+                              Radius.elliptical(10, 40),
+                            ),
                           ),
-
-                        )
+                        ),
                       ),
                       child: child!,
                     );
